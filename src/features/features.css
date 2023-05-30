@@ -1,0 +1,57 @@
+.hidden-close {
+  opacity: 0;
+  height: 0px;
+  transition: 0.8s;
+  border-radius: 15px;
+  background: blue;
+  color: white;
+  justify-content: left;
+  text-align: justify;
+  overflow: hidden;
+}
+.hidden-open {
+  opacity: 1;
+  border-radius: 15px;
+  background: blue;
+  height: 650px;
+  color: white;
+  justify-content: left;
+  text-align: justify;
+  overflow: hidden;
+  transition: 0.8s;
+}
+
+.hidden-part {
+  padding-right: 15px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.displayed {
+  padding-left: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+span {
+  cursor: pointer;
+  border: solid blue;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+span:hover {
+  border: solid white;
+  box-shadow: 0px 2px 2px 2px grey;
+  color: white;
+  background-color: blue;
+}
+
+.topdisplay p {
+  margin-bottom: 25px;
+  text-align: justify;
+}
