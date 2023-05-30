@@ -1,0 +1,61 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 1rem;
+  background-color: #bbd0e4; /* Set the desired background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Set the desired box shadow */
+  background-blend-mode: soft-light;
+  margin-bottom: 1rem; /* Add space at the bottom to create a gap */
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem; /* Add a gap between the search bar and other elements */
+}
+
+.search-input {
+  width: 100%;
+  max-width: 300px; /* Adjust the maximum width of the input as needed */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem; /* Set the desired border radius */
+  border: none;
+}
+
+.card-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Adjust the gap between cards as needed */
+}
+
+.card {
+  width: 190%;
+  max-width: 300px; /* Adjust the maximum width of each card as needed */
+  background-color: #white; /* Set the desired background color */
+  border-radius: 0.25rem; /* Set the desired border radius */
+  overflow: hidden; /* Hide overflowing content */
+  opacity: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Set the desired box shadow */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: auto; /* Ensure images maintain aspect ratio and fill the container */
+  border-top-left-radius: 0.25rem; /* Set the desired border radius */
+  border-top-right-radius: 0.25rem; /* Set the desired border radius */
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-text {
+  margin-bottom: 0;
+  font-family: garamond, sans-serif;
+  color: #333; /* Set the desired text color */
+}
