@@ -63,26 +63,15 @@ function App() {
 
 function Input({ text, setText, handleSubmit }) {
   return (
-    <form className="my-4" onSubmit={handleSubmit}>
-      <div className="input-group">
-        <input
-          type="text"
-          onChange={(e) => setText(e.target.value)}
-          value={text}
-          className="form-control"
-          placeholder="Search images..."
-        />
-        <div className="input-group-append">
-          <button
-            className="btn btn-outline-secondary"
-            type="submit"
-            id="button-addon2"
-          >
-            Search
-          </button>
-        </div>
-      </div>
-    </form>
+    <div className="search-bar">
+      <input
+        type="text"
+        onChange={(e) => setText(e.target.value)}
+        value={text}
+        className="search-input"
+        placeholder="Search images..."
+      />
+    </div>
   );
 }
 
