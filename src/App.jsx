@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import "./App.css";
+import { navbardata } from "./Navbar/navbardata";
 
 function App() {
   const [photos, setPhotos] = useState([]);
@@ -18,12 +19,12 @@ function App() {
     try {
       const result = await axios.get(`https://api.pexels.com/v1/search`, {
         params: {
-          query: text
+          query: text,
         },
         headers: {
           authorization:
-            "tYAQxSYaVayNyIi9BZ4H1sPZ3SbgZiE4DLEpAdmVFM716AvYmgrum3kS"
-        }
+            "tYAQxSYaVayNyIi9BZ4H1sPZ3SbgZiE4DLEpAdmVFM716AvYmgrum3kS",
+        },
       });
       console.log(result.data.photos);
       setPhotos(result.data.photos);
@@ -51,7 +52,7 @@ function App() {
             <div className="card" key={data.id}>
               <img className="card-img-top" src={data.src.medium} alt="nicee" />
               <div className="card-body">
-                <p className="card-text">{data.photographer}</p>
+                <p className="card-text">Photograph by : {data.photographer}</p>
               </div>
             </div>
           ))
@@ -62,8 +63,34 @@ function App() {
 }
 
 function Input({ text, setText, handleSubmit }) {
+  const [sidebar, setsidebar] = useState(false);
+  const showsidebar = () => setsidebar(!sidebar);
+
   return (
     <div className="search-bar">
+      <div>
+        <span className="Dropdownnavbar" onClick={showsidebar}>
+          ☰
+        </span>
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        <ul className="nav-item">
+          <li className="nav-toggle">
+            <a to="#" className="nav-menu-item">
+              <span onClick={showsidebar}>X</span>
+            </a>
+          </li>
+          {navbardata.map((item, index) => {
+            return (
+              <li key={index} className={item.class}>
+                <a to={item.path}>
+                  <span>{item.title}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+      </div>
       <input
         type="text"
         onChange={(e) => setText(e.target.value)}
