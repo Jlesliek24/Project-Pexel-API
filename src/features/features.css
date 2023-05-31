@@ -1,4 +1,4 @@
-.hidden-close {
+.fhidden-close {
   opacity: 0;
   height: 0px;
   transition: 0.8s;
@@ -9,7 +9,7 @@
   text-align: justify;
   overflow: hidden;
 }
-.hidden-open {
+.fhidden-open {
   opacity: 1;
   border-radius: 15px;
   background: blue;
@@ -21,7 +21,7 @@
   transition: 0.8s;
 }
 
-.hidden-part {
+.fhidden-part {
   padding-right: 15px;
   padding-bottom: 10px;
   text-decoration: none;
@@ -33,7 +33,7 @@
   margin-right: 10px;
   padding: 15px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 span {
@@ -54,4 +54,15 @@ span:hover {
 .topdisplay p {
   margin-bottom: 25px;
   text-align: justify;
+}
+
+topdisplayimg{
+  align-content: flex-end;
+  display:flex;
+}
+img {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  align-content: flex-end;
 }

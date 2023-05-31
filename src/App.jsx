@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import "./App.css";
-import { navbardata } from "./Navbar/navbardata";
 
 function App() {
   const [photos, setPhotos] = useState([]);
@@ -63,34 +62,9 @@ function App() {
 }
 
 function Input({ text, setText, handleSubmit }) {
-  const [sidebar, setsidebar] = useState(false);
-  const showsidebar = () => setsidebar(!sidebar);
 
   return (
     <div className="search-bar">
-      <div>
-        <span className="Dropdownnavbar" onClick={showsidebar}>
-          ☰
-        </span>
-        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className="nav-item">
-          <li className="nav-toggle">
-            <a to="#" className="nav-menu-item">
-              <span onClick={showsidebar}>X</span>
-            </a>
-          </li>
-          {navbardata.map((item, index) => {
-            return (
-              <li key={index} className={item.class}>
-                <a to={item.path}>
-                  <span>{item.title}</span>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-      </div>
       <input
         type="text"
         onChange={(e) => setText(e.target.value)}

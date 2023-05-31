@@ -20,10 +20,4 @@ export const navbardata = [
     icon: <FaBeer.FaHeadset />,
     class: "navtext"
   },
-  {
-    title: "Moew",
-    path: "/More",
-    icon: <FaBeer.FaHandHoldingMedical />,
-    class: "navtext"
-  }
 ];

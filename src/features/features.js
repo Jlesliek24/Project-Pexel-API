@@ -16,11 +16,13 @@ function Feature() {
           </p>
           <span onClick={showhidden}>Learn more</span>
         </div>
-        <div className="topdisplayimg">insert image here</div>
+        <div className="topdisplayimg">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.2020onsite.com%2Fhs-fs%2Fhubfs%2Fworking_t20_goEnbk.jpg%3Fwidth%3D2048%26name%3Dworking_t20_goEnbk.jpg&f=1&nofb=1&ipt=434eeac8d89fd744f7c7182c87e01ca75264203ee9630455dba02a5431ebcac3&ipo=images" alt="working place" />
+        </div>
       </div>
-      <div className={hidden ? "hidden-open" : "hidden-close"}>
+      <div className={hidden ? "fhidden-open" : "fhidden-close"}>
         <ul>
-          <li className="hidden-part">
+          <li className="fhidden-part">
             <h1>Photo recouse</h1>
             <p>
               Foto recouse adalah versi berformat JSON dari foto Pexels. Titik
@@ -28,7 +30,7 @@ function Feature() {
               bentuk ini.
             </p>
           </li>
-          <li className="hidden-part">
+          <li className="fhidden-part">
             <h1>Search For Photo</h1>
             <p>
               Endpoint memungkinkan Anda untuk mencari Pexels untuk topik apa
@@ -37,7 +39,7 @@ function Feature() {
               yang spesifik seperti Kelompok orang bekerja.
             </p>
           </li>
-          <li className="hidden-part">
+          <li className="fhidden-part">
             <h1>Curate Photo</h1>
             <p>
               Titik akhir ini memungkinkan Anda menerima foto-foto real-time
@@ -48,7 +50,7 @@ function Feature() {
               berubah dan sedang tren.
             </p>
           </li>
-          <li className="hidden-part">
+          <li className="fhidden-part">
             <h1>Get a photo</h1>
             <p>Menerima spesifik photo dari id tersebut</p>
           </li>
