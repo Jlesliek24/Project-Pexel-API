@@ -1,0 +1,176 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  width: 175%;
+  padding: 1rem;
+  background-color: #bbd0e4; /* Set the desired background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Set the desired box shadow */
+  background-blend-mode: soft-light;
+  margin-bottom: 1rem; /* Add space at the bottom to create a gap */
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 300px; /* Adjust the maximum width of the input as needed */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem; /* Set the desired border radius */
+  border: none;
+  margin-left: 2rem;
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #dbdcef #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #474bff #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.card-columns {
+  display: cover;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 2fr));
+  justify-content: cover;
+  gap: 2rem; /* Adjust the gap between cards as needed */
+}
+
+.card {
+  box-sizing: border-box;
+  width: 80%; /* Use a percentage value to fill the available space */
+  height: auto;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: fill;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto; /* Adjusted to auto for maintaining aspect ratio */
+  max-height: 60vh; /* Changed to viewport height instead of percentage */
+  object-fit: cover; /* Changed from fill to cover for better image adjustment */
+  object-position: center;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+.card-body {
+  width: 80%;
+  padding: 1.4rem;
+  display: flex; /* Changed from fill to flex */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-text {
+  margin-bottom: 0;
+  font-family: garamond, sans-serif;
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+/* Navbar Button */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+  padding: 10px 30px;
+  border: 1px solid;
+  border-radius: 1000px;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(27, 27, 27, 0.5);
+}
+
+.btn:active {
+  transform: translateY(-3px);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.btn:hover::after {
+  background-color: rgb(0, 238, 255);
+  transform: scaleX(1.4) scaleY(1.5);
+  opacity: 0;
+}
